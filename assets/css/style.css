@@ -1,6 +1,7 @@
 body{
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  background: #f8f8f8;
 }
 h1,h2,h4,h5,h6{
   font-family: 'Raleway', sans-serif;
@@ -121,6 +122,9 @@ nav.navbar-light ul.navbar-nav li:last-child{
 .green{
   color: #7AC943;
 }
+.blue{
+  color: #0956C6;
+}
 .strong{
   font-weight: 600;
 }
@@ -208,6 +212,9 @@ a.img-link img{
 }
 img.trapsium{
   width: 100%;
+  position: relative;
+  top: 60px;
+  z-index: 99;
 }
 .head h3{
   color: #3D4B51;
@@ -235,11 +242,11 @@ img.trapsium{
   color: #ffffff;
   height: 60px;
   width: 60px;
-  border-radius: 12px;
+  border-radius: 50px;
   font-size: 26px;
   text-align: center;
   line-height: 60px;
-  background: #7AC943;
+  background: #0956C6;
 }
 .step h5{
   font-size: 18px;
@@ -252,6 +259,7 @@ img.trapsium{
   color: #7F7776;
   font-size: 15px;
   line-height: 28px;
+  font-family: 'Raleway',sans-serif;
 }
 .divider{
   display: block;
@@ -261,17 +269,29 @@ img.trapsium{
   position: relative;
   width: 289px;
 }
+.box-image img.growth-img{
+  width: 45%;
+  margin-right: 33px;
+  margin-top: 10px;
+}
+.box-image img.inverst{
+  width: 47%;
+  margin-right: 45px;
+  margin-top: 20px;
+}
 .box-image.growth::after{
   content: '';
   position: absolute;
   display: block;
   height: 200px;
   width: 200px;
-  border: 1px solid #7AC943;
-  left: 163px;
-  top: -30px;
+  left: 225px;
+  top: -11px;
   z-index: -1;
-  border-radius: 24px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left center, right center, from(rgba(255,255,255,0)),color-stop(100%, #93DCFC));
+  background: -webkit-linear-gradient(left,rgba(255,255,255,0) ,#93DCFC 100%);
+  background: linear-gradient(to right,rgba(255,255,255,0) ,#93DCFC 100%)
 }
 img.cloud{
   width: 70%;
@@ -324,14 +344,36 @@ ul.partner li.mid{
 /* Section Grey */
 #Keunggulan{
   padding-bottom: 100px;
+  padding-top: 120px;
   position: relative;
 }
 .bg-grey{
   background: #f8f8f8;  
 }
 .icon-feature{
-  margin-bottom: 25px;
-  min-height: 65px; 
+  border: 2px solid #0956C6;
+  display: inline-block;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 15px;
+}
+.icon-feature:hover{
+  background: -webkit-gradient(linear, left center, right center, from(#07A9F0),color-stop(60%, #0956C6));
+  background: -webkit-linear-gradient(left,#07A9F0 ,#0956C6 60%);
+  background: linear-gradient(to right,#07A9F0 ,#0956C6 60%);
+  -webkit-transition-timing-function: ease-in-out;
+  border: none;
+}
+.icon-feature:hover img{
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-delay: 0s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
 .box-feature h5{
   color: #3D4B51;
@@ -343,15 +385,19 @@ ul.partner li.mid{
 .box-feature p{
   color: #7F7776;
   font-size: 15px;
-  line-height: 21px;
+  line-height: 28px;
+  font-family: 'Raleway',sans-serif;
 }
 /* End Section Grey */
 
 .bg-clips{
-  background: url('../img/deplaza-home_05.png') no-repeat;
+  background: url(../img/deplaza-home_05.png) no-repeat; */
   background-size: cover;
-  min-height: 876px;
-  padding-top: 230px;
+  background: -webkit-gradient(linear, left center, right center, from(#0956C6),color-stop(100%, #07A9F0));
+  background: -webkit-linear-gradient(left,#0956C6 ,#07A9F0 100%);
+  background: linear-gradient(to right,#0956C6 ,#07A9F0 100%);
+  border-radius: 250px 0px 0px 250px;
+  margin-left: 155px;
 }
 .bg-grey-min{
   background: #f8f8f8;
@@ -364,20 +410,28 @@ ul.partner li.mid{
 }
 .slider__item{
   margin-right: 170px;
+  padding: 60px 0px 0px;
 }
 .slider__item h1{
-  font-size: 30px;
+  font-size: 28px;
   line-height: 48px;
   color: #ffffff;
   margin-bottom: 30px;
+  font-family: 'Open Sans', sans-serif;
 }
 .slider__item p{
   font-size: 14px;
   color: #ffffff;
   line-height: 32px;
+  margin-bottom: 0px;
 }
 .bg-clips .action{
-  margin-top: 60px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.macbook{
+  position: relative;
+  bottom: -60px;
 }
 .slider__item .owl-theme .owl-nav{
   display: inline-block;
@@ -407,7 +461,14 @@ ul.partner li.mid{
 
 /* Harga Paket */
 #HargaPaket{
-  padding-top: 60px;
+  padding-top: 180px;
+  background-color: #f8f8f8;
+}
+#HargaPaket .block-width .col-half.images {
+  width: 50%;
+}
+#HargaPaket .block-width .col-half.images img{
+  width: auto;
 }
 .box-package{
   padding-top: 50px;
@@ -415,7 +476,8 @@ ul.partner li.mid{
 .box-package h1{
   color: #3D4B51;
   font-size: 36px;
-  margin-bottom: 50px;  
+  margin-bottom: 50px; 
+  font-family: 'Open Sans',sans-serif; 
 }
 #HargaPaket .images img{
   padding-right: 60px;
@@ -424,7 +486,7 @@ ul.partner li.mid{
   display: inline-block;
   box-shadow: 0px 0px 25px rgba(127,119,118,0.2), 0px 0px 25px rgba(127,119,118,0.2);
   margin-right: 25px;
-  border-radius: 24px;
+  border-radius: 0px;
   padding: 35px 25px;
   text-align: center;
   min-height: 264px;
@@ -440,17 +502,23 @@ ul.partner li.mid{
   font-size: 32px;
   font-weight: 700;
   text-align: center; 
+  font-family: 'Open Sans', sans-serif;
 }
 .package-list h4{
   font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 .package-list h4 span.normal{
   font-size: 14px;
   font-weight: 400;
   color: #7F7776;
+  font-family: 'Open Sans', sans-serif;
 }
-.package-list .btn-green{
-  background: #7AC943;
+.package-list .btn-green,
+.package-list .btn-green.outline:hover{
+  background: -webkit-gradient(linear, left center, right center, from(#07A9F0),color-stop(60%, #0956C6));
+  background: -webkit-linear-gradient(left,#07A9F0 ,#0956C6 60%);
+  background: linear-gradient(to right,#07A9F0 ,#0956C6 60%);
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
@@ -458,16 +526,25 @@ ul.partner li.mid{
   letter-spacing: 3px;
   padding: 8px 25px;
   margin-top: 15px;
+  border-radius: 50px;
+  border: none;
+}
+.package-list .btn-green.outline{
+  background: #ffffff;
+  color: #0956C6;
+  border: 2px solid #0956C6;
 }
 .package-list .btn-green:hover{
-  background-color: #F86861;
-  border-radius: 35px;
   box-shadow: 0px 5px 15px rgba(127,127,127,0.3);
+}
+img.trapsium.after{
+  top: 0px;
 }
 
 /* DAFTAR */
 #Daftar{
   padding-top: 30px;
+  background: #ffffff;
 }
 #Daftar h2{
   font-size: 32px;
@@ -475,6 +552,7 @@ ul.partner li.mid{
   color: #3D4B51;
   margin-bottom: 20px;
   font-weight: 700;
+  font-family: 'Open Sans',sans-serif;
 }
 #Daftar h4{
   color: #7F7776;
@@ -483,36 +561,52 @@ ul.partner li.mid{
 }
 .form .form-control{
   padding: 18px;
-  border: 1px solid #7AC943;
+  border: 1px solid #0956C6;
   font-size: 15px;
   color: #C1BEBA;
+  border-radius: 50px;
 }
 .form .form-control:hover{
-  box-shadow: 0px 0px 8px rgba(162,205,58,0.5), 0px 0px 8px rgba(162,205,58,0.5);
+  box-shadow: 0px 0px 8px rgba(147,220,252,0.5), 0px 0px 8px rgba(147,220,252,0.5);
 }
 .form .action{
   margin: 50px 0px;
   text-align: right;
 }
 .form a.btn-green{
-  background: #7AC943;
+  background: -webkit-gradient(linear, left center, right center, from(#07A9F0),color-stop(60%, #0956C6));
+  background: -webkit-linear-gradient(left,#07A9F0 ,#0956C6 60%);
+  background: linear-gradient(to right,#07A9F0 ,#0956C6 60%);
   letter-spacing: 3px;
   font-size: 14px;
   padding: 20px 50px;
   margin-right: 0px;
+  border-radius: 50px;
 }
 .form a.btn-green:hover{
-  background: #398E3D;
+  background: #0956C6;
   box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
+.footer,#Keuntungan, .container-fluid.top{
+  background-color: #ffffff;
+}
 .footer .block-width{
   border-top: 1px solid #d0d5d7;
   padding-top: 50px;
 }
 .footer ul.copyright li{
   margin-right: 50px;
+}
+.footer ul.copyright li .name-brand{
+  display: inline-block;
+  color: #0956C6;
+  font-size: 24px;
+  margin-left: 10px;
+}
+.footer ul.copyright li .name-brand .id{
+  font-size: 14px;
 }
 .footer ul.menu{
   text-align: right;
@@ -526,6 +620,7 @@ ul.partner li.mid{
 .footer ul li a{
   color: #7F7776;
   font-size: 15px;
+  font-family: 'Open Sans',sans-serif;
 }
 .footer a{
   text-decoration: none;

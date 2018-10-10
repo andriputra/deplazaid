@@ -67,6 +67,11 @@
   }
   .bg-clips{
     padding-top: 0px;
+    margin-left: 0px;
+    border-radius: 0px;
+  }
+  .macbook{
+    bottom: -10px;
   }
   .bg-clips .block-width{
     width: 100%;
@@ -74,9 +79,13 @@
   .bg-clips .block-width .col-half{
     width: 100%;
     display: block;
+    padding: 20px 0px;
   }
   .bg-clips{
     background-size: inherit;
+  }
+  #HargaPaket .block-width .col-half.images{
+    width: 100%;
   }
   .slider__item {
     margin-right: 0px;
@@ -121,6 +130,7 @@
     display: block;
     margin-right: 0px;
     text-align: center;
+    margin-bottom: 20px;
   }
   .footer ul.menu {
     text-align: center;
